@@ -8,7 +8,7 @@ def get():
     print 'Content-type: text/html\n\n'
     straw = open("songs.csv", "rU")
     songs = straw.read().split("\n")
-    print """
+    end = """
 <html>
     <head>
         <title>College Trip Playlist</title>
@@ -39,7 +39,7 @@ def get():
             toPrint = toPrint.replace('SONGNAME', splitsongs[0])
             toPrint = toPrint.replace('ARTISTNAME', splitsongs[1])
             toPrint = toPrint.replace('SUBMITTEDBY', splitsongs[2])
-            print toPrint
+            end +=  toPrint
         else:
             toPrint = """
                     <tr class="evenRow">
@@ -53,8 +53,8 @@ def get():
             toPrint = toPrint.replace('SONGNAME', splitsongs[0])
             toPrint = toPrint.replace('ARTISTNAME', splitsongs[1])
             toPrint = toPrint.replace('SUBMITTEDBY', splitsongs[2])
-            print toPrint
-            print """
+            end +=  toPrint
+            end +=  """
 
             </table>
         </center>
@@ -62,6 +62,8 @@ def get():
     </body>
 </html>
 """
+
+    print end
             
 
 
