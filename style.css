@@ -1,0 +1,36 @@
+body {
+    background-color: rgba(255, 200, 0,0.1);
+}
+
+h1 {
+    text-decoration: underline;
+    font-size: 10vw;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.linkWrapper {
+    width: 50vw;
+}
+
+.choiceBox {
+    width: 50vw;
+    height: 15vh;
+    background-color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 4vw;
+}
+
+.choiceBox:hover {
+    background-color: #333;
+}
+
+.creds {
+    position: absolute;
+    bottom: 2px;
+}
