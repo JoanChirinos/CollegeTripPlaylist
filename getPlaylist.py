@@ -29,21 +29,20 @@ def get():
     for i in range(len(songs) - 1):
         if i % 2 == 0:
             toPrint = """
-<tr class="oddRow">
+                    <tr class="oddRow">
                         <td><center>SONGNAME</center></td>
                         <td><center>ARTISTNAME</center></td>
                         <td><center>SUBMITTEDBY</center></td>
                     </tr>
                     """
             splitsongs = songs[i].split(',')
-            print splitsongs[0]
             toPrint = toPrint.replace('SONGNAME', splitsongs[0])
             toPrint = toPrint.replace('ARTISTNAME', splitsongs[1])
             toPrint = toPrint.replace('SUBMITTEDBY', splitsongs[2])
             print toPrint
         else:
             toPrint = """
-<tr class="evenRow">
+                    <tr class="evenRow">
                         <td><center>SONGNAME</center></td>
                         <td><center>ARTISTNAME</center></td>
                         <td><center>SUBMITTEDBY</center></td>
@@ -56,7 +55,7 @@ def get():
             toPrint = toPrint.replace('SUBMITTEDBY', splitsongs[2])
             print toPrint
             print """
-</table>
+
             </table>
         </center>
         <div class="creds">~Joan Chirinos, 2018</div>
