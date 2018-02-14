@@ -34,3 +34,29 @@ a {
     position: absolute;
     bottom: 2px;
 }
+
+table {
+    width: 80%;
+    height: 20%
+}
+
+.evenRow, .oddRow {
+    font-size: 2vw;
+}
+
+.evenRow {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.oddRow {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.tableHead {
+    background-color: #444;
+    font-size: 3vw;
+}
+
+th {
+    color: white;
+}
