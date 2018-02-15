@@ -22,3 +22,4 @@ def add():
     straw.close()
 
 add()
+print "Content-type: text/html\n\n<html><body>hello</body></html>"
