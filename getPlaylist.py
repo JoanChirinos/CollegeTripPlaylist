@@ -9,7 +9,11 @@ def get():
     print 'Content-type: text/html\n\n'
     straw = open("songs.csv", "rU")
     songs = straw.read().split("\n")
+    while (songs[-1] == "\n"):
+        songs = songs[0:-1]
+    print songs
     shuffle(songs)
+    print songs
     end = """
 <html>
     <head>
