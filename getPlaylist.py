@@ -55,9 +55,9 @@ def get():
             toPrint = toPrint.replace('SUBMITTEDBY', splitsongs[2])
             end +=  toPrint
             end +=  """
-
-            </table>
+</table>
         </center>
+        <a href="index.html"><div class="back">Back</div></a>
         <div class="creds">~Joan Chirinos, 2018</div>
     </body>
 </html>

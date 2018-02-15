@@ -60,3 +60,16 @@ table {
 th {
     color: white;
 }
+
+.back {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 20;
+    background-color: #444;
+    padding: 5px;
+}
+
+.back:hover {
+    background-color: #C44;
+}
