@@ -11,9 +11,7 @@ def get():
     songs = straw.read().split("\n")
     while (songs[-1] == "\n"):
         songs = songs[0:-1]
-    print songs
     shuffle(songs)
-    print songs
     end = """
 <html>
     <head>
