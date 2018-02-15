@@ -54,7 +54,7 @@ def get():
             toPrint = toPrint.replace('ARTISTNAME', splitsongs[1])
             toPrint = toPrint.replace('SUBMITTEDBY', splitsongs[2])
             end +=  toPrint
-            end +=  """
+    end +=  """
 </table>
         </center>
         <a href="index.html"><div class="back">Back</div></a>
