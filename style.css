@@ -1,5 +1,6 @@
 body {
     background-color: rgba(255, 200, 0,0.1);
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 h1 {
@@ -72,4 +73,9 @@ th {
 
 .back:hover {
     background-color: #C44;
+}
+
+.titleBack {
+    color: #000;
+    text-decoration: underline;
 }
