@@ -1,9 +1,9 @@
 #! usr/bin/python
-##
-##import cgi, cgitb
-##
-##cgitb.enable()
-##
+
+import cgi, cgitb
+
+cgitb.enable()
+
 ##def get():
 ##    print 'Content-type: text/html\n\n'
 ##    straw = open("songs.csv", "rU")
