@@ -20,7 +20,24 @@ def add():
     straw = open("songs.csv", 'w+')
     straw.write(text)
     straw.close()
-    print 'Content-type: text/html\n\n<html><body>hello</body></html>'
 
+def displayThanks():
+    print 'Content-type: text/html\n\n'
+    print """
+                <html>
+                    
+                    <head>
+                        <title>College Trip Playlist</title>
+                        <script type="text/javascript">
+                            window.location.replace("index.html");
+                        </script>
+                        <link href="style.css" type="text/css" rel="stylesheet">
+                    </head>
+                    
+                    <body>
+                    </body>
+                    
+                </html>"""
 add()
+displayThanks()
 
