@@ -1,6 +1,7 @@
 #! /usr/bin/python
 
 import cgi, cgitb
+from random import shuffle
 
 cgitb.enable()
 
@@ -8,6 +9,7 @@ def get():
     print 'Content-type: text/html\n\n'
     straw = open("songs.csv", "rU")
     songs = straw.read().split("\n")
+    shuffle(songs)
     end = """
 <html>
     <head>
