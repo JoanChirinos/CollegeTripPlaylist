@@ -1,29 +1,3 @@
-###! /usr/bin/python
-##
-##import cgi, cgitb
-##
-##cgitb.enable()
-##
-##def add():
-##    fs = cgi.FieldStorage()
-##    si = [fs["songName"], fs["songArtist"], fs["userName"]]
-##    straw = open("songs.csv", "rU")
-##    text = straw.read()
-##    straw.close()
-##
-##    ##Strip new line characters
-##    while text[-1] == '\n':
-##        text = text[0:-1]
-##
-##    text += '\n' + si[0] + ',' + si[1] + ',' + si[2] + '\n'
-##
-##    straw = open("songs.csv", 'w+')
-##    straw.write(text)
-##    straw.close()
-##
-##add()
-##print "Content-type: text/html\n\n<html><body>hello</body></html>"
-
 #! /usr/bin/python
 
 import cgi, cgitb
@@ -96,3 +70,29 @@ def get():
 get()
 
             
+###! /usr/bin/python
+##
+##import cgi, cgitb
+##
+##cgitb.enable()
+##
+##def add():
+##    fs = cgi.FieldStorage()
+##    si = [fs["songName"], fs["songArtist"], fs["userName"]]
+##    straw = open("songs.csv", "rU")
+##    text = straw.read()
+##    straw.close()
+##
+##    ##Strip new line characters
+##    while text[-1] == '\n':
+##        text = text[0:-1]
+##
+##    text += '\n' + si[0] + ',' + si[1] + ',' + si[2] + '\n'
+##
+##    straw = open("songs.csv", 'w+')
+##    straw.write(text)
+##    straw.close()
+##
+##add()
+##print "Content-type: text/html\n\n<html><body>hello</body></html>"
+
