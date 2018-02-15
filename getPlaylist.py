@@ -30,7 +30,7 @@ def get():
                         <th><center>Submitted By</center></th>
                     </tr>
                     """
-    for i in range(len(songs) - 1):
+    for i in range(len(songs)):
         if i % 2 == 0:
             toPrint = """
                     <tr class="oddRow">
