@@ -18,9 +18,17 @@ def get():
     if order == "songName":
         songs = sorted(songs)
     elif order == "songArtist":
-        songs = sorted(songs, key = lambda x: x[1])
+        for i in range(len(songs)):
+            songs[i] = songs[1:3] + [songs[i][0]]
+        songs = sorted(songs)
+        for i in range(len(songs)):
+            songs[i] = [songs[i][2]] + songs[i][0:2]
     elif order == "submittedBy":
-        songs = sorted(songs, key = lambda x: x[2])
+        for i in range(len(songs)):
+            songs[i] = [songs[i][2]] + songs[i][0:2]
+        songs = sorted(songs)
+        for i in range(len(songs)):
+            songs[i] = songs[1:3] + [songs[i][0]]
     else:
         shuffle(songs)
         
