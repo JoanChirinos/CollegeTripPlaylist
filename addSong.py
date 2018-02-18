@@ -6,7 +6,7 @@ cgitb.enable()
 
 def add():
     fs = cgi.FieldStorage()
-    si = [fs.getvalue("songName"), fs.getvalue("songArtist"), fs.getvalue("userName")]
+    si = [fs.getvalue("songName").title(), fs.getvalue("songArtist").title(), fs.getvalue("userName").title()]
     straw = open("songs.csv", "rU")
     text = straw.read()
     straw.close()
