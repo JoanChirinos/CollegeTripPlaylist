@@ -15,6 +15,9 @@ def get():
     while (songs[-1] == ""):
         songs = songs[0:-1]
 
+    for i in range(len(songs)):
+        songs[i] = songs[i].split(',')
+
     if order == "songName":
         songs = sorted(songs)
     elif order == "songArtist":
@@ -60,10 +63,9 @@ def get():
                         <td><center>SUBMITTEDBY</center></td>
                     </tr>
                     """
-            splitsongs = songs[i].split(',')
-            toPrint = toPrint.replace('SONGNAME', splitsongs[0])
-            toPrint = toPrint.replace('ARTISTNAME', splitsongs[1])
-            toPrint = toPrint.replace('SUBMITTEDBY', splitsongs[2])
+            toPrint = toPrint.replace('SONGNAME', songs[i][0])
+            toPrint = toPrint.replace('ARTISTNAME', songs[i][1])
+            toPrint = toPrint.replace('SUBMITTEDBY', songs[i][2])
             end +=  toPrint
         else:
             toPrint = """
@@ -73,11 +75,10 @@ def get():
                         <td><center>SUBMITTEDBY</center></td>
                     </tr>
                     """
-            splitsongs = songs[i].split(',')
             
-            toPrint = toPrint.replace('SONGNAME', splitsongs[0])
-            toPrint = toPrint.replace('ARTISTNAME', splitsongs[1])
-            toPrint = toPrint.replace('SUBMITTEDBY', splitsongs[2])
+            toPrint = toPrint.replace('SONGNAME', songs[i][0])
+            toPrint = toPrint.replace('ARTISTNAME', songs[i][1])
+            toPrint = toPrint.replace('SUBMITTEDBY', songs[i][2])
             end +=  toPrint
     end +=  """
 </table>
