@@ -22,7 +22,7 @@ def get():
         songs = sorted(songs)
     elif order == "songArtist":
         for i in range(len(songs)):
-            songs[i] = songs[1:3] + [songs[i][0]]
+            songs[i] = songs[i][1:3] + [songs[i][0]]
         songs = sorted(songs)
         for i in range(len(songs)):
             songs[i] = [songs[i][2]] + songs[i][0:2]
@@ -31,7 +31,7 @@ def get():
             songs[i] = [songs[i][2]] + songs[i][0:2]
         songs = sorted(songs)
         for i in range(len(songs)):
-            songs[i] = songs[1:3] + [songs[i][0]]
+            songs[i] = songs[i][1:3] + [songs[i][0]]
     else:
         shuffle(songs)
         
