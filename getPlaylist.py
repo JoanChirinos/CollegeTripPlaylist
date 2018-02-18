@@ -6,12 +6,25 @@ from random import shuffle
 cgitb.enable()
 
 def get():
+    fs = cgi.FieldStorage()
+    order = fs.getvalue("order", "none")
+    
     print 'Content-type: text/html\n\n'
     straw = open("songs.csv", "rU")
     songs = straw.read().split("\n")
     while (songs[-1] == ""):
         songs = songs[0:-1]
-    shuffle(songs)
+
+    if order = "songName":
+        songs = sorted(songs)
+    elif order = "songArtist":
+        songs = sorted(songs, key = lambda x: x[1])
+    elif order = "submittedBy":
+        songs = sorted(songs, key = lambda x: x[2])
+    else:
+        shuffle(songs)
+        
+        
     end = """
 <html>
     <head>
@@ -25,9 +38,9 @@ def get():
             <table>
                 <table>
                     <tr class="tableHead">
-                        <th><center>Song Name</center></th>
-                        <th><center>Song Artist</center></th>
-                        <th><center>Submitted By</center></th>
+                        <th><a href="getPlaylist.py?order=songName"><center>Song Name</center></a></th>
+                        <th><a href="getPlaylist.py?order=songArtist"><center>Song Artist</center></a></th>
+                        <th><a href="getPlaylist.py?order=submittedBy"><center>Submitted By</center></a></th>
                     </tr>
                     """
     for i in range(len(songs)):
