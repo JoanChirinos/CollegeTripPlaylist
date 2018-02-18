@@ -68,7 +68,7 @@ th {
 }
 
 .back {
-    position: absolute;
+    position: fixed;
     bottom: 5px;
     right: 5px;
     font-size: 20;
