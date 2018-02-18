@@ -37,7 +37,7 @@ a {
 }
 
 .creds {
-    position: absolute;
+    position: fixed;
     bottom: 2px;
 }
 
