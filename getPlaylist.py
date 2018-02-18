@@ -15,11 +15,11 @@ def get():
     while (songs[-1] == ""):
         songs = songs[0:-1]
 
-    if order = "songName":
+    if order == "songName":
         songs = sorted(songs)
-    elif order = "songArtist":
+    elif order == "songArtist":
         songs = sorted(songs, key = lambda x: x[1])
-    elif order = "submittedBy":
+    elif order == "submittedBy":
         songs = sorted(songs, key = lambda x: x[2])
     else:
         shuffle(songs)
